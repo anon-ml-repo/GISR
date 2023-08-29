@@ -7,17 +7,21 @@ Create a conda environment using `conda create --name <env> --file requirements.
 
 ## (Optional) Drug interaction data pre-processing
 
-If you would like to run GISR on the graph-structured data ensemble constructed from [DrugComb repository](https://drugcomb.fimm.fi) and [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/), follow the steps below.
+If you would like to run GISR on the graph-structured data ensemble constructed from [DrugComb repository](https://drugcomb.fimm.fi) and [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/), follow the steps below. Note that we have already included the pre-processed data in data/processed.
 
-### Step 1: Install Reservoir data lake
+### Step 1: Download PrimeKG
+
+Download the PrimeKG graph from [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) and, following the steps in the paper, create a PyTorch Geometric HeteroData object `kg_hetero.pt' in the data directory.
+
+### Step 2: Install Reservoir data lake
 
 We use the Reservoir data lake to retrieve dose-response data from DrugComb. Follow the Reservoir [installation instructions](https://github.com/RECOVERcoalition/Reservoir/tree/main).
 
 Make sure that the `reservoir` folder is in the GISR directory.
 
-### Step 2: Data pre-processing
+### Step 3: Data pre-processing
 
-Run `preprocessing.py` to load the DrugComb and PrimeKG datasets. We include a filtered version of PrimeKG in `kg_hetero.pt` as a PyTorch Geometric HeteroData object. We also include `kg_drug_node_lookup.csv`, which contains a mapping between node indices in this graph and DrugBank IDs that are used to map the drug pairs to their datasets in DrugComb.
+Run `preprocessing.py` to load the DrugComb and PrimeKG datasets. We include `kg_drug_node_lookup.csv`, which contains a mapping between node indices in this graph and DrugBank IDs that are used to map the drug pairs to their datasets in DrugComb.
 
 Below are the arguments you can pass to the script along with their descriptions:
 
