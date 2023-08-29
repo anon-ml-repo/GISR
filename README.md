@@ -11,7 +11,7 @@ If you would like to run GISR on the graph-structured data ensemble constructed 
 
 ### Step 1: Download PrimeKG
 
-Download the PrimeKG graph from [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) and, following the steps in the paper, create a PyTorch Geometric HeteroData object `kg_hetero.pt` in the data directory.
+Download the PrimeKG graph from [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) and, following the steps in the paper, create a PyTorch Geometric HeteroData object `kg_hetero.pt` in the `/data/` directory.
 
 ### Step 2: Install Reservoir data lake
 
