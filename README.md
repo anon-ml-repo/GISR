@@ -54,7 +54,7 @@ Below are the arguments you can pass to the script along with their descriptions
 
 ## Running GISR
 
-Run `train.py` to run GISR. Below are the arguments you can pass to the script along with their descriptions:
+Run `gisr.py` to train the GISR model. Below are the arguments you can pass to the script along with their descriptions:
 
 ### Arguments:
 
