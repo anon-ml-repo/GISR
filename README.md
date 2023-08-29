@@ -17,7 +17,9 @@ Make sure that the `reservoir` folder is in the GISR directory.
 
 ### Step 2: Data pre-processing
 
-Run `preprocessing.py` to load the DrugComb and PrimeKG dataset. Below are the arguments you can pass to the script along with their descriptions:
+Run `preprocessing.py` to load the DrugComb and PrimeKG datasets. We include a filtered version of PrimeKG in `kg_hetero.pt` as a PyTorch Geometric HeteroData object. We also include `kg_drug_node_lookup.csv`, which contains a mapping between node indices in this graph and DrugBank IDs that are used to map the drug pairs to their datasets in DrugComb.
+
+Below are the arguments you can pass to the script along with their descriptions:
 
 #### Arguments:
 
